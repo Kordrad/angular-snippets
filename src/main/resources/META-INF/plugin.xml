@@ -9,7 +9,8 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.kordrad.angularsnippets.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <defaultLiveTemplates file="/liveTemplates/Angular.xml"/>
+        <liveTemplateContext implementation="org.intellij.sdk.liveTemplates.AngularSnippetsProvider"/>
     </extensions>
 
     <applicationListeners>

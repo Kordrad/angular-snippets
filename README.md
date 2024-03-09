@@ -1,8 +1,8 @@
 # angular-snippets
 
 ![Build](https://github.com/Kordrad/angular-snippets/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/com.github.kordrad.angularsnippets.svg)](https://plugins.jetbrains.com/plugin/com.github.kordrad.angularsnippets)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/com.github.kordrad.angularsnippets.svg)](https://plugins.jetbrains.com/plugin/com.github.kordrad.angularsnippets)
 
 ## Template ToDo list
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
