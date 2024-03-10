@@ -1,44 +1,101 @@
-# angular-snippets
+# Angular Snippets
 
 ![Build](https://github.com/Kordrad/angular-snippets/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/com.github.kordrad.angularsnippets.svg)](https://plugins.jetbrains.com/plugin/com.github.kordrad.angularsnippets)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/com.github.kordrad.angularsnippets.svg)](https://plugins.jetbrains.com/plugin/com.github.kordrad.angularsnippets)
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties), [plugin ID](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `PLUGIN_ID` in the above README badges.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+## Overview
+![preview](images/example.png)
+![preview](images/list.png)
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+The Angular Snippets WebStorm Plugin is a powerful tool designed to enhance your development experience with WebStorm by providing a collection of live templates specifically tailored for Angular development. These live templates aim to boost your productivity by offering quick and easy access to common Angular code snippets.
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+
+| Trigger                  | Description                                                      |
+|--------------------------|------------------------------------------------------------------|
+| `a-class`                | Angular [class.name] binding                                     |
+| `a-component`            | Angular component with predefined options                        |
+| `a-component-inline`     | Angular component with an inline template and predefined options |
+| `a-component-root`       | Angular App root component with predefined options               |
+| `a-component-standalone` | Angular standalone component with predefined options             |
+| `a-directive`            | Angular directive with predefined options                        |
+| `a-inject`               | readonly name = inject()                                         |
+| `a-pipe`                 | Angular pipe with predefined options                             |
+| `a-pipe-standalone`      | Angular standalone pipe with predefined options                  |
+| `a-resolveFn`            | Angular resolver function                                        |
+| `a-resolveFn-parameter`  | Angular resolver function by parameter                           |
+| `a-service`              | Angular service with predefined options                          |
+| `a-service-httpclient`   | Angular service with HttpClient                                  |
+
+
 <!-- Plugin description end -->
+
+## Features
+
+- **Rich Collection of Angular Snippets**: Benefit from a comprehensive set of Angular live templates covering components, directives, services, and more.
+
+- **Effortless Integration**: Seamlessly integrate the Angular Snippets plugin into your WebStorm IDE, ensuring a smooth development workflow.
+
+- **Increased Productivity**: Save time and reduce repetitive typing by utilizing these pre-defined Angular code snippets for common patterns and structures.
+
+- **Customizable Templates**: Tailor the live templates to fit your specific coding style and preferences.
 
 ## Installation
 
-- Using the IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "angular-snippets"</kbd> >
-  <kbd>Install</kbd>
-  
-- Manually:
+Follow these steps to install the Angular Snippets WebStorm Plugin:
 
-  Download the [latest release](https://github.com/Kordrad/angular-snippets/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+1. Open WebStorm.
+
+2. Navigate to `Preferences` (or `Settings` on Windows) > `Plugins`.
+
+3. Click on the `Marketplace` tab.
+
+4. Search for "Angular Snippets" and click `Install`.
+
+5. Restart WebStorm to apply the changes.
+
+## Usage
+
+Once the Angular Snippets plugin is installed, you can start using the live templates in your Angular projects.
+
+- Type the predefined shortcut for a specific snippet, and the plugin will expand it into the corresponding Angular code.
+
+  For example, type `a-`, select live-template and press `Tab` to generate an Angular component template.
+
+- Alternatively, use the shortcut `Ctrl + J` to display a menu for choosing live templates.
+
+## Contributing
+
+Contributions to the Angular Snippets WebStorm Plugin are welcome! If you have additional Angular snippets or improvements to existing ones, feel free to submit a pull request.
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/new-snippet`.
+3. Make your changes and commit them: `git commit -m 'Add new Angular snippet'`.
+4. Push to the branch: `git push origin feature/new-snippet`.
+5. Submit a pull request.
+
+## Bug Reports and Feature Requests
+
+If you encounter any bugs or have suggestions for new features, please [create an issue](link-to-issues) in our GitHub repository.
+
+## License
+
+This Angular Snippets WebStorm Plugin is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Contact
+
+For any inquiries or issues, please contact with me:
 
 
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+[![Linkedin](https://img.shields.io/badge/Konrad%20Stępień--369?style=flat-square&logo=linkedin&logoColor=white&color=blue)][linkedin]
+[![E-Mail](https://img.shields.io/badge/kord.stp@gmail.com--BB001B?style=flat-square&logo=gmail&logoColor=white)][email]
+[![X](https://img.shields.io/badge/@Kordrad--000000?style=flat-square&logo=x&logoColor=white)][x]
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+
+[linkedin]: https://www.linkedin.com/in/KonradStepien/
+[email]: mailto:kord.stp@gmail.com?subject=Hello%20Konrad,%20From%20Github
+[x]: https://twitter.com/kordrad
+
+Happy coding with Angular Snippets! 🚀

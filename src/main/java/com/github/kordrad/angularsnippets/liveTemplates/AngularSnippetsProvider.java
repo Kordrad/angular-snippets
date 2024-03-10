@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 final class AngularSnippetsProvider extends TemplateContextType {
 
   AngularSnippetsProvider() {
-    super("Angular");
+    super("ANGULAR", "Angular");
   }
 
   @Override
