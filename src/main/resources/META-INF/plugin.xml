@@ -13,7 +13,10 @@
         <liveTemplateContext implementation="org.intellij.sdk.liveTemplates.AngularSnippetsProvider"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.kordrad.angularsnippets.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <!--
+        <applicationListeners>
+            <listener class="com.github.kordrad.angularsnippets.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        </applicationListeners
+    >-->
 </idea-plugin>
+

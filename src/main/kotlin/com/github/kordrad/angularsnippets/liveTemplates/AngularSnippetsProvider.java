@@ -1,4 +1,4 @@
-package com.github.kordrad.angularsnippets.listeners;
+package com.github.kordrad.angularsnippets.liveTemplates;
 
 import com.intellij.codeInsight.template.TemplateActionContext;
 import com.intellij.codeInsight.template.TemplateContextType;
