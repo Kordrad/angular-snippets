@@ -1,0 +1,102 @@
+<templateSet group="Angular Snippets">
+  <template name="a-class" value="[class.$className$]=&quot;$expression$&quot;" description="Angular [class.name] binding" toReformat="true" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="expression" expression="" defaultValue="&quot;expression&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="ANGULAR_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="a-component" value="import { Component } from '@angular/core';&#10;&#10;@Component({&#10; selector: '$prefix_app$-$selector_name$',&#10; templateUrl: '$file$.html',&#10; styleUrls: ['./$file$.scss'],&#10;})&#10;export class $Name$Component {&#10; $END$&#10;}&#10;" description="Angular component with predefined options" toReformat="false" toShortenFQNames="true">
+    <variable name="file" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <variable name="prefix_app" expression="" defaultValue="&quot;app&quot;" alwaysStopAt="true" />
+    <variable name="Name" expression="capitalize(camelCase(regularExpression(fileNameWithoutExtension(), &quot;\\.[a-z]+&quot;, '')))" defaultValue="" alwaysStopAt="true" />
+    <variable name="selector_name" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-component-inline" value="import { Component } from '@angular/core';&#10;&#10;@Component({&#10; selector: '$prefix_app$-$selector_name$',&#10; template: `$END$`&#10;})&#10;export class $Name$Component {&#10;}&#10;" description="Angular component with an inline template and predefined options" toReformat="false" toShortenFQNames="true">
+    <variable name="prefix_app" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Name" expression="capitalize(camelCase(regularExpression(fileNameWithoutExtension(), &quot;\\.[a-z]+&quot;, '')))" defaultValue="" alwaysStopAt="true" />
+    <variable name="selector_name" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-component-root" value="import { Component } from '@angular/core';&#10;&#10;@Component({&#10; selector: '$prefix_app$-$selector_name$',&#10; template: `&#10;  &lt;router-outlet&gt;&lt;/router-outlet&gt;&#10;  `&#10;})&#10;export class $Name$Component {&#10; $END$&#10;}" description="Angular App root component with predefined options" toReformat="false" toShortenFQNames="true">
+    <variable name="prefix_app" expression="" defaultValue="&quot;app&quot;" alwaysStopAt="true" />
+    <variable name="Name" expression="capitalize(camelCase(regularExpression(fileNameWithoutExtension(), &quot;\\.[a-z]+&quot;, '')))" defaultValue="" alwaysStopAt="true" />
+    <variable name="selector_name" expression="" defaultValue="&quot;root&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-component-standalone" value="import { Component } from '@angular/core';&#10;&#10;@Component({&#10; selector: '$prefix$-$selector_name$',&#10; templateUrl: '$file$.html',&#10; styleUrls: ['./$file$.scss'],&#10; standalone: true&#10;})&#10;export class $Name$Component {&#10; $END$&#10;}&#10;" description="Angular standalone component with predefined options" toReformat="false" toShortenFQNames="true">
+    <variable name="prefix" expression="" defaultValue="app" alwaysStopAt="true" />
+    <variable name="Name" expression="capitalize(camelCase(selector_name))" defaultValue="" alwaysStopAt="true" />
+    <variable name="file" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <variable name="selector_name" expression="regularExpression(fileNameWithoutExtension(), &quot;\\.[a-z]+&quot;, '')" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-directive" value="import { Directive } from '@angular/core';&#10;&#10;@Directive({ selector: '[$prefix_app$$selector_name$]' })&#10;export class $Name$Directive {&#10; $END$&#10;}&#10;" description="Angular directive with predefined options" toReformat="false" toShortenFQNames="true">
+    <variable name="prefix_app" expression="" defaultValue="&quot;app&quot;" alwaysStopAt="true" />
+    <variable name="Name" expression="capitalize(camelCase(regularExpression(fileNameWithoutExtension(), &quot;\\.[a-z]+&quot;, '')))" defaultValue="" alwaysStopAt="true" />
+    <variable name="selector_name" expression="Name" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-inject" value="readonly $name$ = inject($service$) " description="readonly name = inject()" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="service" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="camelCase(service)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="ANGULAR_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="a-pipe" value="import { Pipe, PipeTransform } from '@angular/core';&#10;&#10;@Pipe({&#10; name: '$selector_name$'&#10;})&#10;export class $Name$Pipe implements PipeTransform {&#10; transform(value: any, ...args: any[]): any {&#10;  $END$&#10; }&#10;}" description="Angular pipe with predefined options" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="capitalize(camelCase(regularExpression(fileNameWithoutExtension(), &quot;\\.[a-z]+&quot;, '')))" defaultValue="&quot;Name&quot;" alwaysStopAt="true" />
+    <variable name="selector_name" expression="camelCase(Name)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-pipe-standalone" value="import { Pipe, PipeTransform } from '@angular/core';&#10;&#10;@Pipe({&#10; name: '$selector_name$',&#10; standalone: true&#10;})&#10;export class $Name$Pipe implements PipeTransform {&#10; transform(value: any, ...args: any[]): any {&#10;  $END$&#10; }&#10;}" description="Angular standalone pipe with predefined options" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="capitalize(camelCase(regularExpression(fileNameWithoutExtension(), &quot;\\.[a-z]+&quot;, '')))" defaultValue="&quot;Name&quot;" alwaysStopAt="true" />
+    <variable name="selector_name" expression="camelCase(Name)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-resolveFn" value="const $name$Resolver: ResolveFn&lt;$type$&gt; = (&#10;  route: ActivatedRouteSnapshot,&#10;  state: RouterStateSnapshot&#10;) =&gt; {&#10;  return $END$&#10;};" description="Angular resolver function" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-resolveFn-parameter" value="const $name$Resolver: ResolveFn&lt;$type$&gt; = (&#10;  route: ActivatedRouteSnapshot,&#10;  state: RouterStateSnapshot&#10;) =&gt; {&#10;  return inject($service$).$method$(route.paramMap.get($end$))&#10;};" description="Angular resolver function by parameter" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="service" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="method" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-service" value="import { Injectable } from '@angular/core';&#10;&#10;@Injectable()&#10;export class $Name$Service {&#10;$END$&#10; constructor() { }&#10;}" description="Angular service with predefined options" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="capitalize(camelCase(regularExpression(fileNameWithoutExtension(), &quot;\\.[a-z]+&quot;, '')))" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-service-httpclient" value="import { HttpClient } from '@angular/common/http';&#10;import { inject, Injectable } from '@angular/core';&#10;&#10;@Injectable()&#10;export class $Name$Service {&#10; private readonly BASE_URL = $base_url$&#10; private readonly httpClient = inject(HttpClient);&#10;&#10; $END$&#10;}" description="Angular service with HttpClient" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="capitalize(camelCase(regularExpression(fileNameWithoutExtension(), &quot;\\.[a-z]+&quot;, '')))" defaultValue="" alwaysStopAt="true" />
+    <variable name="base_url" expression="" defaultValue="&quot;'https://'&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="ANGULAR_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>

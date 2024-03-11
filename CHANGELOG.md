@@ -1,6 +1,23 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# angular-snippets Changelog
+# Angular nippets Changelog
+
+## [0.1.0]
+### Added
+- a-class
+- a-component
+- a-component-inline
+- a-component-root
+- a-component-standalone
+- a-directive
+- a-inject
+- a-pipe
+- a-pipe-standalone
+- a-resolveFn
+- a-resolveFn-parameter
+- a-service
+- a-service-httpclient
+
 
 ## [Unreleased]
 ### Added
